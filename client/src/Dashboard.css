@@ -1,0 +1,201 @@
+/* ===== Background ===== */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== Main Container ===== */
+.dashboard-container {
+  width: 90%;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  color: white;
+}
+
+/* ===== Title ===== */
+.title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+/* ===== Header Section ===== */
+.logout-btn-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.logout-btn-div h2 {
+  font-weight: 700;
+}
+
+/* ===== Logout Button ===== */
+.logout-btn {
+  padding: 8px 18px;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 75, 43, 0.4);
+}
+
+/* ===== Add Button ===== */
+.add-btn-div {
+  text-align: right;
+  margin-top: 25px;
+}
+
+.add-btn {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.add-btn.close-mode {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+}
+
+.add-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 114, 255, 0.4);
+}
+
+/* ===== Employee Table ===== */
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  color: #333;
+}
+
+.employee-table th {
+  background: #222;
+  color: white;
+  padding: 12px;
+  font-weight: 600;
+}
+
+.employee-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.employee-table tr:hover {
+  background: #f4f4f4;
+  transition: 0.3s;
+}
+
+/* ===== Edit & Delete Buttons ===== */
+.edit-btn {
+  padding: 6px 14px;
+  margin-right: 6px;
+  background: linear-gradient(135deg, #f7971e, #ffd200);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #333;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.edit-btn:hover {
+  transform: scale(1.05);
+}
+
+.delete-btn {
+  padding: 6px 14px;
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Form Section ===== */
+.employee-form {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.employee-form input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.employee-form input:focus {
+  box-shadow: 0 0 10px rgba(0, 114, 255, 0.6);
+}
+
+/* ===== Submit Button ===== */
+.submit-btn {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #00b09b, #96c93d);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:disabled {
+  background: #999;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 176, 155, 0.4);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .employee-form {
+    flex-direction: column;
+  }
+
+  .logout-btn-div {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
