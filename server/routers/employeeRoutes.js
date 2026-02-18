@@ -61,7 +61,7 @@ router.put("/:id", auth , async (req, res)=>{
 router.delete("/:id", auth , async (req, res)=>{
     try{
  const employee = await Employee.findOneAndDelete({_id: req.params.id, user: req.user.id});
-    res.json({message: "user deleted Successfully"});
+   
 
     if(!employee){
         return res.status(404).json({message:"Employee not found"})
@@ -72,6 +72,8 @@ router.delete("/:id", auth , async (req, res)=>{
 
 
     }
+
+     res.json({message: "user deleted Successfully"});
    
 
 });
