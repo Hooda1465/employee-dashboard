@@ -2,6 +2,7 @@ const express = require("express");
 const Employee = require("../models/employee");
 const auth = require("../middleware/auth");
 const employee = require("../models/employee");
+const mongoose = require("mongoose");
 
 const router = express.Router();
 
@@ -38,16 +39,18 @@ router.put("/:id", auth , async (req, res)=>{
     const {name, email, position, salary}= req.body;
 
     const emp = await Employee.findOneAndUpdate(
+
         {_id : req.params.id, user: req.user.id}, {name, email, position, salary}, {new : true, runValidators: true});
          
     if(!emp){
+
             return res.status(404).json({message:"Employee not found"});
         }
 
     res.json(emp);
 
     }catch(error){
-        res.status(500).json({message:"Server Error"});
+        res.status(500).json({message: error.message});
 
     }
 
