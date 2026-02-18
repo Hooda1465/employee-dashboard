@@ -66,7 +66,7 @@ const handleAdd = async (e) =>{
     !formData.name.trim() ||
     !formData.email.trim() ||
     !formData.position.trim() ||
-    !formData.salary.trim() 
+    !formData.salary
 
   ){
     alert("All field are Required!")
@@ -125,7 +125,7 @@ const handleUpdate = async (e)=>{
     !formData.name.trim() ||
     !formData.email.trim() ||
     !formData.position.trim() ||
-    !formData.salary.trim() 
+    !formData.salary 
 
   ){
     alert("All field are Required!")
